@@ -1,0 +1,66 @@
+buildscript {
+    repositories {
+        google()  // Google Maven repository
+        mavenCentral()  // Maven Central repository
+    }
+    dependencies {
+
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.1"
+    }
+}
+
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    // END: FlutterFire Configuration
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.tracksystem"
+    compileSdkVersion 34
+    ndkVersion flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        applicationId = "com.example.tracksystem"
+        minSdkVersion 21
+        targetSdkVersion 33
+        multiDexEnabled true
+        versionCode flutter.versionCode
+        versionName flutter.versionName
+    }
+
+    signingConfigs {
+        debug {
+            // Configure your debug signing here, if needed
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+repositories {
+    google()  // Ensure you have Google Maven repository
+    mavenCentral()  // Ensure Maven Central is included
+}
+apply plugin: 'com.google.gms.google-services'

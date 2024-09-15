@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "75707891733",
+    "project_id": "track-4cfbe",
+    "storage_bucket": "track-4cfbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75707891733:android:39bba9c4596863b09f4e1c",
+        "android_client_info": {
+          "package_name": "com.example.tracksystem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ36H4yU9MrwDNK06TRvrmn3BE-gP5I-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
